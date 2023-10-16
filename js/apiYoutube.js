@@ -2,8 +2,7 @@ const url = 'https://youtube-v3-alternative.p.rapidapi.com/search?query=cat&geo=
 const options = {
     method: 'GET',
     headers: {
-        // 'X-RapidAPI-Key': '880571e815msh01dcc1ee823c0e8p1bb176jsnba517596e961',
-        'X-RapidAPI-Key': 'AIzaSyB4pZC7NwcnqUpPNbQVLnxqOhpNChbgzHQ',
+        'X-RapidAPI-Key': '',
         'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
     }
 };
