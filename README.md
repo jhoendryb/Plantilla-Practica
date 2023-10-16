@@ -1,2 +1,3 @@
-# Plantilla-Practica
-Una réplica de una vista.
+# React Chat
+
+![Texto alternativo](./img/Plantilla.jpeg)
