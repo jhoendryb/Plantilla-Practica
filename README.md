@@ -1,3 +1,3 @@
-# React Chat
+# Plantilla
 
 ![Texto alternativo](./img/Plantilla.jpeg)
