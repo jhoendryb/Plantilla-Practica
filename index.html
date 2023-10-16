@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag And Drop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <!-- CSS de Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container p-container">
+        <div class="p-box">
+            <h4 id="p-times">00:00</h4>
+            <p>lunes</p>
+            <p>2023. 07. 31.</p>
+        </div>
+        <div class="p-box">
+            <ul>
+                <li><i class="fa fa-wifi"></i></li>
+                <li><i class="fa fa-wifi"></i></li>
+                <li><i class="fa fa-wifi"></i></li>
+            </ul>
+        </div>
+        <div class="p-box">
+            <ul>
+                <li><i class="fa fa-wifi"></i></li>
+                <li><i class="fa fa-wifi"></i></li>
+                <li><i class="fa fa-wifi"></i></li>
+                <li><i class="fa fa-wifi"></i></li>
+            </ul>
+        </div>
+        <div class="p-box">
+            <div class="p-box-play">
+                <img src="./img/test2.jpg" alt="#" id="p-portada" class="p-img-play">
+                <div class="p-reproducer-play">
+                    <p id="p-artista">ARTISTA</p>
+                    <p id="p-tema">TEMA</p>
+                    <span class="p-controls">
+                        <i class="fa fa-backward" aria-hidden="true" id="p-controls-anterior"></i>
+                        <i class="fa fa-play comenzar" aria-hidden="true" id="p-controls-play-pause"></i>
+                        <i class="fa fa-forward" aria-hidden="true" id="p-controls-siguiente"></i>
+                        <audio id="p-audio" src="./src/Suzume.mp3"></audio>
+                        <input type="hidden" id="data-audio-index">
+                    </span>
+                </div>
+            </div>
+            <div class="p-box-redes">
+                <div class="p-redes-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="p-redes-icon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="p-redes-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="p-redes-icon">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="p-redes-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+        <div class="p-box">
+            <div class="p-file-acceso-directo">
+                <i class="fa fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="p-file-acceso-directo">
+                <i class="fa fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="p-file-acceso-directo">
+                <i class="fa fa-folder-open" aria-hidden="true"></i>
+            </div>
+            <div class="p-file-acceso-directo">
+                <i class="fa fa-folder-open" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="p-box">
+            <img src="./img/test2.jpg" alt="xample2" class="p-img-logo">
+            <p>bocchi</p>
+            <p>Good Afternoon!</p>
+        </div>
+        <div class="p-box">
+            <ul>
+                <li>
+                    <i class="fa fa-charging-station"></i>
+                    <input type="range" oninput="rangeLoead(this)" name="" id="" min="0" max="100" value="30">
+                    <span>30%</span>
+                </li>
+                <li>
+                    <i class="fa fa-image"></i>
+                    <input type="range" oninput="rangeLoead(this)" name="" id="" min="0" max="100" value="60">
+                    <span>60%</span>
+                </li>
+                <li>
+                    <i class="fa fa-file"></i>
+                    <input type="range" oninput="rangeLoead(this)" name="" id="" min="0" max="100" value="90">
+                    <span>90%</span>
+                </li>
+                <li>
+                    <i class="fa fa-thermometer-empty"></i>
+                    <input type="range" oninput="rangeLoead(this)" name="" id="" min="0" max="100" value="100">
+                    <span>100%</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- JavaScript de Select2 -->
+    <script src="./js/timer.js"></script>
+    <script src="./js/apiDeezer.js"></script>
+    <script src="./js/apiYoutube.js"></script>
+    <script src="./js/api-keys.js"></script>
+    <script src="./js/controlAudio.js"></script>
+</body>
+
+</html>
